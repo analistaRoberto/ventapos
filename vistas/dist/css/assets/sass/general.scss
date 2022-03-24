@@ -1,0 +1,153 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;//1 rem igual a 10px
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    min-height: 100vh;
+    font-size: 1.5rem;
+}
+.title {
+    font-family: 'Roboto', sans-serif;
+}
+.contenedor {
+    position: relative;
+    width: 100%;
+}
+.navegacion {
+position: fixed;
+width: 30rem;
+height: 100%;
+background-color: $color--azul;
+border-left:1rem solid  $color--azul;
+transition:0.5s;
+overflow:hidden;
+}
+.navegacion  
+{
+    ul {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 0;
+    }
+    li {
+        position: relative;
+        width: 100%;
+        list-style:none;
+        border-top-left-radius:3rem;
+        border-bottom-left-radius: 3rem;
+        svg {
+            fill:$color--blanco;
+        }
+        &:hover {
+            background-color: $color--blanco;
+            a {
+                span {
+                    svg {
+                        fill:$color--naranja;
+                     
+                    }
+                }
+                color:$color--azul;
+                &::before {
+                content:'';
+                position:absolute;
+                top:-5rem;
+                right: 0;
+                width: 5rem;
+                height: 5rem;
+                background: transparent;
+                border-radius: 50%;
+                box-shadow: 3.5rem 3.5rem 0 1rem $color--blanco;
+                pointer-events:none;
+                
+            }
+                &::after {
+                    content:'';
+                    position:absolute;
+                    bottom:-5rem;
+                    right: 0;
+                    width: 5rem;
+                    height: 5rem;
+                    background: transparent;
+                    border-radius: 50%;
+                    box-shadow: 3.5rem -3.5rem 0 1rem $color--blanco;
+                    pointer-events:none;
+                    }
+            }
+        }
+        & .hovered {
+            background-color: $color--blanco;
+            a {
+                color:$color--azul;
+                &::before {
+                content:'';
+                position:absolute;
+                top:-5rem;
+                right: 0;
+                width: 5rem;
+                height: 5rem;
+                background: transparent;
+                border-radius: 50%;
+                box-shadow: 3.5rem 3.5rem 0 1rem $color--blanco;
+                pointer-events:none;
+                }
+                &::after {
+                    content:'';
+                    position:absolute;
+                    bottom:-5rem;
+                    right: 0;
+                    width: 5rem;
+                    height: 5rem;
+                    background: transparent;
+                    border-radius: 50%;
+                    box-shadow: 3.5rem -3.5rem 0 1rem $color--blanco;
+                    pointer-events:none;
+                    }
+            }
+        }
+        
+        &:nth-child(1){
+            margin-bottom: 6rem;
+            }
+        a {
+            position: relative;
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            color:$color--blanco;
+            .icon {
+                position:relative;
+                display: block;
+                min-width: 6rem;
+                height: 6rem;
+                line-height: 7rem;
+                text-align: center;
+                ion-icon {
+                    font-size:1.75rem;
+                }
+            }
+            .title {
+                position:relative;
+                display: block;
+                padding: 0 1rem;
+                height: 6rem;
+                line-height: 6rem;
+
+            }
+            
+        }
+    }
+    
+}
+.navegacion.active {
+    width: 20rem;  
+  }
+  .border-table tbody {
+      overflow: scroll;
+  }

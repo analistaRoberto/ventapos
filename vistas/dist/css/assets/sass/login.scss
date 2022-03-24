@@ -1,0 +1,111 @@
+.backgroun-body {
+    background-color: rgb(243, 244, 253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caja-login {
+    background-color: #fff;
+    min-height: 50rem;
+    width: 80rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.7rem 2.5rem rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width:760px) {
+        display: block;
+        margin:2rem;
+    }
+    .colorlogin {
+        @media (max-width:760px) {
+            display: none;
+
+        }
+        background-color: $color--azul;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-top-left-radius:2rem;
+        border-bottom-left-radius: 2rem;
+        color:$color--blanco;
+        img {
+            width: 30%;
+            margin: 0 auto;
+        }
+    }
+}
+.background-img {
+
+    background-image: url(../img/bg.png);
+    background-position: center;
+    background-size: cover;
+
+
+}
+.margincenter {
+    margin: 3rem;
+    h2 {
+        color: $color--azul;
+    }
+}
+.alingform {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    label {
+        margin-bottom: 1rem;
+    }
+    
+}
+.btnlogin {
+    text-align: center;
+    margin-top: 4rem;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: $color--naranja;
+    border-color: $color--naranja;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    &:hover {
+        background-color: red;
+        border-color: red;
+        cursor: pointer;
+    }
+}
+.form-control {display: block;
+width: 100%;
+height: calc(1.5em + 0.75rem + 2px);
+padding: .175rem 2.25rem .175rem .75rem;
+font-size: 1.5rem;
+font-weight: 400;
+line-height: 1.5;
+color: #a8afc7;
+background-color: #ffffff;
+background-clip: padding-box;
+border: 1px solid #e8e8f7;
+border-radius: 3px;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+height: 38px;
+border-radius: 5px;
+}
+.resetcuenta {
+    color:$colo--negro2;
+    margin-top:3rem ;
+    display: flex;
+    flex-direction: column;
+    span {
+        margin-bottom: 1rem;
+        a {
+            text-decoration: none;
+            color: $color--naranja;
+        }
+    }
+}
+.margin-top {
+    margin-top: 4rem;
+}
+.textdecriptivo {
+    color: $colo--negro2;
+}

@@ -1,0 +1,199 @@
+.scroll-table {
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+.detalle {
+    position: relative;
+    width: 100%;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap:3rem;
+    .personaslogin {
+        @media (max-width:800px) {
+            grid-column: 1/ span 3;
+            order: 1;
+            
+        }
+    }
+    &__tabla {
+        padding: 2rem;
+        background-color: $color--blanco;
+        min-height: 50rem;
+        border-radius: 2rem;
+        box-shadow: 0 0.7rem 2.5rem rgba(0, 0, 0, 0.08);
+        display: grid;
+        @media (max-width:800px) {
+            grid-column: 1/ span 3;
+            order: 2;
+            
+        }
+        .border-table {
+
+            width: 100%;
+            border-collapse: collapse;
+            tr {
+                width: 10rem;
+                
+            }
+
+            
+        }
+        
+    }
+}
+.cardheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+        font-weight: 600;
+        color:$color--azul;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        background-color: $color--azul;
+        color:$color--blanco;
+        text-decoration: none;;
+        border-radius: 0.5rem;
+        &:hover {
+            background-color: $color--negro;
+            color: $color--blanco;
+        }
+
+    }
+}
+.detalle__tabla {
+    table{ 
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        tr {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                &:last-child {
+                    border-bottom: none;
+                }
+                td {
+                    padding: 1rem 2.5rem 1rem 2.5rem;
+                    letter-spacing: normal;
+                    white-space: nowrap;
+                    &:last-child {
+                        text-align: end;
+                    }
+                    &:nth-child(2) {
+                        text-align: end;
+                    }
+                    &:nth-child(3) {
+                        text-align: center;
+                    }
+                }
+            } 
+        thead {
+            
+                td{
+                font-weight: 600;  
+                }
+        }
+        tbody {
+            tr {
+                td {
+                    color:$color--gristable;
+                }
+            }
+            tr:hover {
+                background-color: $color--gris;
+            }
+        }
+    }
+
+}
+.estado {
+    padding: 0.3rem 0.6rem;
+    background-color: $color--azul;
+    color: $color--blanco;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    &.activo{
+        background-color: $color--activo;
+        color:$color--blanco;
+    }
+    &.pendiente {
+        background-color: $color--pendiente;
+        color:$color--blanco;
+    }
+    &.cancelado {
+        background-color: $color--cancelado;
+        color:$color--blanco;
+    }
+}
+
+.personaslogin {
+    position: relative;
+    display: grid;
+    min-height: 50rem;
+    padding: 2rem;
+    box-shadow: 0 0.7rem 2.5rem rgba(0,0,0,0.08);
+    background-color: $color--blanco;
+    border-radius: 2rem;
+    .imgbx {
+       position: relative;
+       width: 5rem;
+       height: 5rem;
+       border-radius: 50%;
+       overflow: hidden;
+       img {
+           position:absolute;
+           top:0;
+           left:0;
+           right: -2rem;
+           width: 100%;
+           height: 100%;
+           overflow:cover;
+       }
+
+    }
+    table {
+        border-collapse: collapse;
+        .imperfil {
+
+                padding-left: 1rem;
+
+        }
+        tr{
+            margin: 0; 
+        td {
+            border:none;
+            h4 {
+                font-weight: 800;
+                color: $color--negro;
+                margin-left: 2rem;
+                span {
+                    font-weight: 400;
+                    color: $colo--negro2;
+                }
+            }
+            }
+        }
+        tr:hover {
+        background-color: $color--azul;
+        color: $color--blanco;
+        td {
+            h4 {
+                color: $color--blanco;
+            span {
+                color:$color--blanco;
+            }
+            }
+        }
+        }
+    }
+
+}
+.img-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+}
